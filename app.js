@@ -84,3 +84,6 @@ console.log("Apollo and subscription server is up!");
 // server.listen().then(({ url }) => {
 //   console.log(`🚀  Server ready at ${url}`);
 // });
+
+// Export the Express API
+module.exports = app;

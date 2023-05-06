@@ -1,0 +1,17 @@
+1) Prisma will automatically create a database thorugh the model, we don't have to write queries
+2) @id means unique value (primary key) where as @default(autoincrement()) means it is added and incremented by computer automatically
+3) DateTime @default(now()) means computer will automatically enter current time
+4) More Info about data types in prisma: "https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/using-prisma-migrate-typescript-postgres"
+5) npx prisma db push <--- to push the table in the SQL database
+6) Can also view your database on "npx prisma studio" like xampp
+7) npx prisma db push <--- again to save changes
+8) npm innstall @prisma/client <--- for resolvers
+9) Go to CRUD prisma for more info on creating users
+
+Q: Why the JWT (token)?
+Ans: The token is kept by the client (React-App in our case) as a sign that the user is logged in. Whenever a user tries to fetch a protected resourse (say, a list of all users), it needs to attach JWT in a header with the request, so that server can verify it and allow user to access the protected resourse.
+
+10) receiver User @relation(fields: [receiverId], references: [id]) <--- this line is to create relation between receiverId in message table and id in the user table
+
+11) In typeDefs, for date, scalar means that it will have only one value, whereas type has multiple values i.e. non-scalar. Note: String will work just fine for createdDate as well!
+ 
